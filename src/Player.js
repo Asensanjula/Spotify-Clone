@@ -1,12 +1,24 @@
 import React from 'react';
+import "./Player.css"
 import {useDataLayerValue} from "./DataLayer";
+import Sidebar from "./Sidebar";
+import Body from "./Body";
+import Footer from "./Footer";
 
 function Player(props) {
 
     const [{user},dispatch] = useDataLayerValue();
+
     return (
+
         <div className='player'>
-            <h1>Welcome {user.display_name} to Spotify</h1>
+            <div className="player__body">
+                {/*sideBar*/}
+                <Sidebar/>
+                {/*Body*/}
+                <Body/>
+            </div>
+            <Footer/>
         </div>
     );
 }

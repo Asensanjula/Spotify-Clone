@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import Body from "./Body";
 import Footer from "./Footer";
 
-function Player(props) {
+function Player({spotify}) {
 
     const [{user},dispatch] = useDataLayerValue();
 
@@ -16,7 +16,7 @@ function Player(props) {
                 {/*sideBar*/}
                 <Sidebar/>
                 {/*Body*/}
-                <Body/>
+                <Body spotify={spotify}/>
             </div>
             <Footer/>
         </div>
